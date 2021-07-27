@@ -1,5 +1,5 @@
 librosa==0.8.0
 numpy==1.19.5
 streamlit==0.81.1
-pyaudio==0.2.11
+Pyaudio==0.2.11
 scikit_learn==0.24.2
