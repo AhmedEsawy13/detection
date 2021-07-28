@@ -4,7 +4,6 @@ import numpy as np
 import os
 import librosa
 from extract_mfcc import extract_features
-from aya_format_recording import record
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -24,11 +23,6 @@ if uploaded_audio:
         signal, sr = librosa.load(uploaded_audio)
         print(signal.shape, sr)
         y = extract_features(signal, sr)
-if st.button("Record"):
-        with st.spinner(f'Recording for {10} seconds ....'):
-            record()
-        st.success("Recording completed")
-        st.audio("record.wav")
 if st.button('Detect'):
         if not uploaded_audio:
             signal, sr = librosa.load("record.wav")
