@@ -7,7 +7,7 @@ from extract_mfcc import extract_features
 import warnings
 warnings.filterwarnings("ignore")
 
-model_path = "reciter_models/"
+model_path = "reciter_models\\"
 gmm_files = [os.path.join(model_path, reciter_name) for reciter_name in
              os.listdir(model_path) if reciter_name.endswith('.gmm')]
 
